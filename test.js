@@ -11,3 +11,7 @@ test('override', t => {
   t.same(obj.a.b.c.d, 'hello');
 });
 
+// TODO: test conflict
+// nest(obj, 'a.b', {value: 1})
+// nest(obj, 'a.b.c', {value: 2})
+// should be {value:1, c: {value: 2}}
