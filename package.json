@@ -1,0 +1,26 @@
+{
+  "name": "object-nest",
+  "version": "0.1.0",
+  "description": "Assign some property nestly",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egoist/object-nest.git"
+  },
+  "keywords": [
+    "markdown",
+    "yaml"
+  ],
+  "author": "EGOIST <0x142857@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egoist/object-nest/issues"
+  },
+  "homepage": "https://github.com/egoist/object-nest#readme",
+  "devDependencies": {
+    "ava": "^0.7.0"
+  }
+}
