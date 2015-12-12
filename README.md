@@ -12,6 +12,7 @@ npm install --save object-nest
 
 ```javascript
 const objectNest = require('object-nest');
+// assign a object nestly
 var obj = { a: 1 };
 obj = objectNest(obj, 'b.c.d', 'hello');
 // return Object
@@ -23,6 +24,9 @@ obj = objectNest(obj, 'b.c.d', 'hello');
     }
   }
 }
+//create a new object nestly
+obj = objectNest(null, 'a.b.c.d', 'hi');
+// obj.a.b.c.d => 'hi'
 ```
 
 ## License

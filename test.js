@@ -11,13 +11,14 @@ test('override', t => {
   t.same(obj.a.b.c.d, 'hello');
 });
 
-// TODO: test conflict
-// nest(obj, 'a.b', {value: 1})
-// nest(obj, 'a.b.c', {value: 2})
-// should be {value:1, c: {value: 2}}
 test('conflict', t => {
   let obj = {a: 1};
   obj = objectNest(obj, 'a.b', {value: 1});
   obj = objectNest(obj, 'a.b.c', {value: 2});
   t.ok(obj.a.b.value === 1 && obj.a.b.c.value === 2);
+});
+
+test('empty', t => {
+  let obj = objectNest(null, 'a.b.c.d', 1);
+  t.same(obj.a.b.c.d, 1);
 });

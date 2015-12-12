@@ -1,7 +1,7 @@
 module.exports = function (obj, key, value) {
   key = key.split('.');
   var finalKey = key.pop();
-  var nest = Object.create(obj);
+  var nest = Object.create(obj || {});
   var base = nest;
   var currentKey;
   while (key.length) {

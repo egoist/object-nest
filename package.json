@@ -1,6 +1,6 @@
 {
   "name": "object-nest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Assign some property nestly",
   "main": "index.js",
   "scripts": {
