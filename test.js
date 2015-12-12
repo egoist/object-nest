@@ -15,3 +15,9 @@ test('override', t => {
 // nest(obj, 'a.b', {value: 1})
 // nest(obj, 'a.b.c', {value: 2})
 // should be {value:1, c: {value: 2}}
+test('conflict', t => {
+  let obj = {a: 1};
+  obj = objectNest(obj, 'a.b', {value: 1});
+  obj = objectNest(obj, 'a.b.c', {value: 2});
+  t.ok(obj.a.b.value === 1 && obj.a.b.c.value === 2);
+});
