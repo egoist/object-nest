@@ -1,7 +1,10 @@
+var clone = require('lodash.clone');
+
 module.exports = function (obj, key, value) {
+  
   key = key.split('.');
   var finalKey = key.pop();
-  var nest = Object.create(obj || {});
+  var nest = obj ? clone(obj, true) : {};
   var base = nest;
   var currentKey;
   while (key.length) {

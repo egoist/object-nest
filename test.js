@@ -22,3 +22,10 @@ test('empty', t => {
   let obj = objectNest(null, 'a.b.c.d', 1);
   t.same(obj.a.b.c.d, 1);
 });
+
+test('same level', t => {
+  let obj = {};
+  obj = objectNest(obj, 'a', {d: 4});
+  obj = objectNest(obj, 'b', 2);
+  t.ok(obj.a.d === 4 && obj.b === 2);
+});
